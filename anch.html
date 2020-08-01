@@ -1,0 +1,54 @@
+  
+<html>
+<head>
+<script language="javascript" type="text/javascript">
+function randomString() {
+    var chars = document.getElementById("butt").value;
+    var string_length = document.getElementById("bad").value;
+    var randomstring = '';
+    for (var i=0; i<string_length; i++) {
+        var rnum = Math.floor(Math.random() * chars.length);
+        randomstring += chars.substring(rnum,rnum+1);
+    }
+    document.noob.randomfield.value = randomstring;
+};
+
+function copy() {
+  var copyText = document.getElementById("aaa").value;
+  copyText.select();
+  document.execCommand("copy");
+};
+
+function refresh() {
+    var chars = document.getElementById("butt").value;
+    var string_length = document.getElementById("bad").value;
+    var randomstring = '';
+    for (var i=0; i<string_length; i++) {
+        var rnum = Math.floor(Math.random() * chars.length);
+        randomstring += chars.substring(rnum,rnum+1);
+    }
+    document.noob.randomfield.value = randomstring;
+      var copyText = document.getElementById("aaa");
+  copyText.select();
+  document.execCommand("copy");
+};
+
+function baa() {
+    document.getElementById("butt").value = "  aaaAAA!";
+    document.getElementById("bad").value = "2000";
+};
+</script>
+</head>
+<body>
+<form name="noob">
+put the characters hERE: <input type="text" value="  aaaAAA!" id="butt">(a a aAAA!)<br>
+put the AMOUTN of characters hERE: <input type="text" value="2000" id="bad">(2000)<br>
+<input type="button" value="generate thing" onClick="randomString();"><br>
+<input type="text" name="randomfield" style="width: 1000px;" id="aaa" value=""><br>
+<input type="button" onClick="copy();" value="copy"><br>
+<input type="button" onClick="baa();" value="default settings (AM WORKING ON THIS IT DOESNT DO ANYTHING RIGHT NOW OK"><br>
+<input type="button" onClick="refresh();" style="height:200px; width:500px;" value="generate and copy">
+<br><br><br>by reading this you agree that anch is really cool :ok_hand:
+</form>
+</body>
+</html>
